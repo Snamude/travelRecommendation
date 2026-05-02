@@ -128,6 +128,31 @@ main img {
   padding-left: 2rem 0;
 }
 
+/* ADDED RESPONSIVE OVERRIDES BELOW TO FIX THE LANDING PAGE VIEW */
+@media screen and (max-width: 992px) {
+    .container {
+        padding-right: 0 !important; /* Removes the large right gap on mobile/tablets */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .jumbotron {
+        margin-top: 20px !important; /* Brings the box back into view on small screens */
+        width: 100%;
+        max-width: 500px;
+    }
+    main .cotainer {
+        padding-left: 0 !important; /* Centers search results on mobile */
+        justify-items: center;
+    }
+    main img {
+        width: 100% !important; /* Makes images fit the phone screen width */
+        height: auto;
+    }
+    .card {
+        width: 90% !important; /* Ensures cards don't overflow the screen */
+        height: auto !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -151,31 +176,26 @@ main img {
           <a class="nav-link" href="Contact_us.html">Contact Us</a>
         </li>
       </ul>
-    </div>
        </center>
 
-       <div style="float: right;">
+       <align right>
  <main>
-      <form style="display: flex; gap: 5px; padding: 10px;">
+      <form>
         
         <input type="text" name="" placeholder="Search" id="myinput">
         <button class="btn btn-primary" type="submit">Search</button>
         <button class="btn btn-primary" type="submit">Clear</button>
       </form>
     </main>
-   </div>
-  </div>
-</nav>
+   </nav>
   
    
  <main>
 
-<!-- Added style to container to override fixed padding and allow flexibility -->
-<div class="cotainer" style="padding-left: 0; display: flex; flex-direction: column; align-items: center; width: 100%;">
+<div class="cotainer">
   <div id="hidden-content" until-found>
-   <!-- Added max-width and height:auto to ensure it fits mobile screens -->
-   <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 396px;">
-  <img src="Sydney Australia.jpg" style="max-width: 100%; height: auto;">
+   <div class="card" style="width: 530px; height: 396px;">
+  <img src="Sydney Australia.jpg">
   <h2>Sydney, Australia</h2>
   <h3>A country vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</h3>
 </div>
@@ -183,8 +203,8 @@ main img {
 <br>
   <br>
 <div id="hidden-content" until-found>
-     <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 396px;">
-        <img src="Melbourne Australia.jpg" style="max-width: 100%; height: auto;">
+     <div class="card" style="width: 530px; height: 396px;">
+        <img src="Melbourne Australia.jpg">
          <h2>Melbourne, Australia</h2>
           <h3>A cultural hub famous for its art, food, and diverse <br>neighborhoods in the country known as downunder.</h3>
         </div>
@@ -192,8 +212,8 @@ main img {
 <br>
 <br>
 <div id="hidden-content" until-found>
-     <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 426px;">
-        <img src="Tokyo Japan.jpg" alt="" style="max-width: 100%; height: auto;">
+     <div class="card" style="width: 530px; height: 426px;">
+        <img src="Tokyo Japan.jpg" alt="">
          <h2>Tokyo, Japan</h2>
           <h3>A bustling metropolis blending tradition and modernity, <br>famous for its cherry blossoms and rich culture. Its a country worth seeing</h3>
         </div>
@@ -201,8 +221,8 @@ main img {
 <br>
 <br>
 <div id="hidden-content" until-found>
-     <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 406px;">
-        <img src="Kyoto Japan.jpg" alt="" style="max-width: 100%; height: auto;">
+     <div class="card" style="width: 530px; height: 406px;">
+        <img src="Kyoto Japan.jpg" alt="">
          <h2>Kyoto, Japan</h2>
           <h3>Known for its historic temples, gardens, and traditional tea<br> houses. Don't miss out on this country</h3>
         </div>
@@ -211,8 +231,8 @@ main img {
 <br>
 <br>
       <div id="hidden-content" until-found>
-           <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 426px;">
-        <img src="Rio de Janeiro  Brazil.jpg" alt="" style="max-width: 100%; height: auto;">
+           <div class="card" style="width: 530px; height: 426px;">
+        <img src="Rio de Janeiro  Brazil.jpg" alt="">
          <h2>Rio de Janeiro, Brazil</h2>
           <h3>A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks. This country is a mix of African, portuguese, and spanish culture</h3>
         </div>
@@ -220,8 +240,8 @@ main img {
 <br>
 <br>
       <div id="hidden-content" until-found>
-           <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 406px;">
-        <img src="Sao Paulo Brazil.jpg" alt="" style="max-width: 100%; height: auto;">
+           <div class="card" style="width: 530px; height: 406px;">
+        <img src="Sao Paulo Brazil.jpg" alt="">
          <h2>São Paulo, Brazil</h2>
           <h3>The financial hub with diverse culture, arts, and a vibrant <br>nightlife. This is one of the reasons people choose to go on vacation to this country</h3>
         </div>
@@ -229,8 +249,8 @@ main img {
 <br>
 <br>
     <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 406px;">
-        <img src="Angkor Wat, Cambodia.jpg" alt="" style="max-width: 100%; height: auto;">
+         <div class="card" style="width: 530px; height: 406px;">
+        <img src="Angkor Wat, Cambodia.jpg" alt="">
          <h2>Angkor Wat, Cambodia</h2>
           <h3>A UNESCO World Heritage site, the largest religious monument in the world, and this country is known for their temples.</h3>
         </div>
@@ -238,8 +258,8 @@ main img {
 <br>
 <br>
      <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 406px;">
-        <img src="Taj Mahal India.jpg" alt="" style="max-width: 100%; height: auto;">
+         <div class="card" style="width: 530px; height: 406px;">
+        <img src="Taj Mahal India.jpg" alt="">
          <h2>Taj Mahal, India</h2>
           <h3>An iconic symbol of love and a masterpiece of Mughal <br>architecture. This country also known for Bollywood.</h3>
         </div>
@@ -247,8 +267,8 @@ main img {
 <br>
   <br>
     <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 435px;">
-        <img src="golden temple India.jpg" alt="" style="max-width: 100%; height: auto;">
+         <div class="card" style="width: 530px; height: 435px;">
+        <img src="golden temple India.jpg" alt="">
          <h2>Amritsar, India</h2>
           <h3>India is known for its vibrant festivals like Holi, the birthplace of major religions like Hinduism, Buddhism, Jainism, and Sikhism, its practice of yoga and Ayurveda. This country is known for its spices too.</h3>
         </div>
@@ -256,8 +276,8 @@ main img {
 <br>
   <br>
 <div id="hidden-content" until-found>
-    <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 419px;">
-   <img src="Sihanoukville Cambodia.jpg" alt="" style="max-width: 100%; height: auto;">
+    <div class="card" style="width: 530px; height: 419px;">
+   <img src="Sihanoukville Cambodia.jpg" alt="">
     <h2>Sihanoukville, Cambodia</h2>
      <h3>Sihanoukville, Cambodia is known for its tropical beaches and crystal-clear waters. This country is known for its temples too.</h3>
    </div>
@@ -266,18 +286,17 @@ main img {
   <br>
 
      <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; max-width: 95%; height: auto; min-height: 406px;">
-        <img src="Bora Bora French Polynesia.jpg" alt="" style="max-width: 100%; height: auto;">
+         <div class="card" style="width: 530px; height: 406px;">
+        <img src="Bora Bora French Polynesia.jpg" alt="">
          <h2>Bora Bora, French Polynesia</h2>
           <h3>An island known for its stunning turquoise waters, beaches, and luxurious overwater bungalows. This country is one of the best vacation spots.</h3>
         </div>
       </div>
-</main></div>
+</main></align right></div>
 <br>
 <br>
-<!-- Overriding padding-right to allow the jumbotron to center on all devices -->
-<div class="container" style="padding-right: 0; width: 100%;">
-      <div class="jumbotron" style="margin-top: 2rem; max-width: 90%;">
+<div class="container">
+      <div class="jumbotron">
           <bold><h1 style="color: rgb(43, 47, 85);">EXPLORE<br>YOUR DREAM <br>DESTINATION</h1></bold>
           <p>Welcome to our website. Your safety is our number one priority. We provide you with the information you need to know before you travel to your dream destination, so that you are safe while having fun. Travel to your dream destinations to have fun while you remote work, learn about their cultures 
              and explore different cities in foreign countries.</p>
