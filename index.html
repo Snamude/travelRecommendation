@@ -19,25 +19,33 @@
             background-attachment: fixed;
             margin: 0;
             display: flex;
-            min-height: 100vh;
+            height: 100vh; 
             flex-direction: column;
+            overflow: hidden; 
         }
 
         .jumbotron {
-            background-color: rgba(255, 255, 270, 0.5);
+            background-color: rgba(255, 255, 255, 0.8); 
             padding: 2rem;
             border-radius: 10px;
-            margin-top: 2rem; 
+            margin-top: 1rem; 
             text-align: left;
+            max-width: 800px;
         }
 
-        h1 { color: navy; }
-        p { color: #000000; 
-            font-size: 16px; 
+        h1 { 
+            color: navy; 
+            font-weight: bold; 
+        }
+        
+        p { 
+            color: #000000; 
+            font-size: 18px; 
             font-family: Arial, sans-serif; 
-            line-height: 1.5; 
-            font-weight: bold;
-            }
+            line-height: 1.6;
+            font-weight: 900; 
+            text-shadow: 0.5px 0.5px 0px rgba(255, 255, 255, 0.8);
+        }
 
         h2 { color: navy; font-size: 20px; }
 
@@ -65,7 +73,8 @@
           display: grid;
           grid-template-columns: repeat(1, 1fr);
           padding-left: 610px;
-          overflow-y: scroll;
+          height: calc(100vh - 100px); 
+          overflow-y: auto; 
         }
 
         main img { width: 500px; height: 300px; }
@@ -77,13 +86,14 @@
           transition: 0.3s;
           padding: 2px 16px;
           background: white;
+          margin-bottom: 20px;
         }
 
-        /* Responsive Fix: Overrides the 610px gap on smaller screens */
         @media only screen and (max-width: 1100px) {
+            body { overflow-y: auto; height: auto; }
             .container { padding-left: 15px; justify-content: center; }
             .jumbotron { width: 100%; margin-top: 1rem; }
-            main .cotainer { padding-left: 0 !important; justify-items: center; }
+            main .cotainer { padding-left: 0 !important; justify-items: center; height: auto; overflow-y: visible; }
             main img { width: 100% !important; height: auto !important; }
             .card { width: 95% !important; height: auto !important; max-width: 530px; }
         }
@@ -114,10 +124,9 @@
 
 <div id="main-welcome" class="container">
   <div class="jumbotron">
-      <bold><h1 style="color: rgb(43, 47, 85);">EXPLORE<br>YOUR DREAM <br>DESTINATION</h1></bold>
-      <bold><p>Welcome to our website. Your safety is our number one priority. We provide you with the information you need to know before you travel to your dream destination, so that you are safe while having fun. Travel to your dream destinations to have fun while you remote work, learn about their cultures and explore different cities in foreign countries.[cite: 1]</p>
-      <P>Search the following in Search box: Sydney, Melbourne, Australia, Tokyo, Japan, Kyoto, Rio de Janeiro, Brazil, São Paulo, Angkor Wat, Cambodia, Taj Mahal, India, Amritsar, Sihanoukville, Bora Bora, or French Polynesia.</P>
-      </bold>
+      <h1>EXPLORE<br>YOUR DREAM <br>DESTINATION</h1>
+      <p>Welcome to our website. Your safety is our number one priority. We provide you with the information you need to know before you travel to your dream destination, so that you are safe while having fun. Travel to your dream destinations to have fun while you remote work, learn about their cultures and explore different cities in foreign countries.</p>
+      <p>Search the following in Search box: Sydney, Melbourne, Australia, Tokyo, Japan, Kyoto, Rio de Janeiro, Brazil, São Paulo, Angkor Wat, Cambodia, Taj Mahal, India, Amritsar, Sihanoukville, Bora Bora, or French Polynesia.</p>
       <center>
         <p><button class="btn btn-primary" type="button">Book Now</button></p>
         <p>
@@ -132,93 +141,93 @@
   
 <main>
 <div class="cotainer">
-  <div id="hidden-content" until-found>
+  <div id="hidden-content">
    <div class="card" style="width: 530px; height: 396px;">
-  <img src="Sydney Australia.jpg">
-  <h2>Sydney, Australia</h2>
-  <h3>A country vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</h3>
-</div>
-</div>
-<br><br>
-<div id="hidden-content" until-found>
+      <img src="Sydney Australia.jpg">
+      <h2>Sydney, Australia</h2>
+      <h3>A country vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.</h3>
+    </div>
+  </div>
+
+  <div id="hidden-content">
      <div class="card" style="width: 530px; height: 396px;">
         <img src="Melbourne Australia.jpg">
          <h2>Melbourne, Australia</h2>
-          <h3>A cultural hub famous for its art, food, and diverse <br>neighborhoods in the country known as downunder.[cite: 1]</h3>
+          <h3>A cultural hub famous for its art, food, and diverse neighborhoods in the country known as downunder.</h3>
         </div>
-      </div>
-<br><br>
-<div id="hidden-content" until-found>
+  </div>
+
+  <div id="hidden-content">
      <div class="card" style="width: 530px; height: 426px;">
         <img src="Tokyo Japan.jpg" alt="">
          <h2>Tokyo, Japan</h2>
-          <h3>A bustling metropolis blending tradition and modernity, <br>famous for its cherry blossoms and rich culture. Its a country worth seeing[cite: 1]</h3>
+          <h3>A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture. Its a country worth seeing.</h3>
         </div>
-      </div>
-<br><br>
-<div id="hidden-content" until-found>
+  </div>
+
+  <div id="hidden-content">
      <div class="card" style="width: 530px; height: 406px;">
         <img src="Kyoto Japan.jpg" alt="">
          <h2>Kyoto, Japan</h2>
-          <h3>Known for its historic temples, gardens, and traditional tea<br> houses. Don't miss out on this country[cite: 1]</h3>
+          <h3>Known for its historic temples, gardens, and traditional tea houses. Don't miss out on this country.</h3>
         </div>
-      </div>
-<br><br>
-      <div id="hidden-content" until-found>
-           <div class="card" style="width: 530px; height: 426px;">
-        <img src="Rio de Janeiro  Brazil.jpg" alt="">
+  </div>
+
+  <div id="hidden-content">
+       <div class="card" style="width: 530px; height: 426px;">
+        <img src="Rio de Janeiro Brazil.jpg" alt="">
          <h2>Rio de Janeiro, Brazil</h2>
-          <h3>A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks. This country is a mix of African, portuguese, and spanish culture[cite: 1]</h3>
+          <h3>A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks. This country is a mix of African, portuguese, and spanish culture.</h3>
         </div>
-      </div>
-<br><br>
-      <div id="hidden-content" until-found>
-           <div class="card" style="width: 530px; height: 406px;">
+  </div>
+
+  <div id="hidden-content">
+       <div class="card" style="width: 530px; height: 406px;">
         <img src="Sao Paulo Brazil.jpg" alt="">
          <h2>São Paulo, Brazil</h2>
-          <h3>The financial hub with diverse culture, arts, and a vibrant <br>nightlife. This is one of the reasons people choose to go on vacation to this country[cite: 1]</h3>
+          <h3>The financial hub with diverse culture, arts, and a vibrant nightlife. This is one of the reasons people choose to go on vacation to this country.</h3>
         </div>
-      </div>
-<br><br>
-    <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; height: 406px;">
+  </div>
+
+  <div id="hidden-content">
+       <div class="card" style="width: 530px; height: 406px;">
         <img src="Angkor Wat, Cambodia.jpg" alt="">
          <h2>Angkor Wat, Cambodia</h2>
-          <h3>A UNESCO World Heritage site, the largest religious monument in the world, and this country is known for their temples.[cite: 1]</h3>
+          <h3>A UNESCO World Heritage site, the largest religious monument in the world, and this country is known for their temples.</h3>
         </div>
-</div>
-<br><br>
-     <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; height: 406px;">
+  </div>
+
+  <div id="hidden-content">
+       <div class="card" style="width: 530px; height: 406px;">
         <img src="Taj Mahal India.jpg" alt="">
          <h2>Taj Mahal, India</h2>
-          <h3>An iconic symbol of love and a masterpiece of Mughal <br>architecture. This country also known for Bollywood.[cite: 1]</h3>
+          <h3>An iconic symbol of love and a masterpiece of Mughal architecture. This country also known for Bollywood.</h3>
         </div>
-      </div>
-<br><br>
-    <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; height: 435px;">
+  </div>
+
+  <div id="hidden-content">
+       <div class="card" style="width: 530px; height: 435px;">
         <img src="golden temple India.jpg" alt="">
          <h2>Amritsar, India</h2>
-          <h3>India is known for its vibrant festivals like Holi, the birthplace of major religions like Hinduism, Buddhism, Jainism, and Sikhism, its practice of yoga and Ayurveda. This country is known for its spices too.[cite: 1]</h3>
+          <h3>India is known for its vibrant festivals like Holi, the birthplace of major religions like Hinduism, Buddhism, Jainism, and Sikhism, its practice of yoga and Ayurveda. This country is known for its spices too.</h3>
         </div>
-</div>
-<br><br>
-<div id="hidden-content" until-found>
+  </div>
+
+  <div id="hidden-content">
     <div class="card" style="width: 530px; height: 419px;">
-   <img src="Sihanoukville Cambodia.jpg" alt="">
-    <h2>Sihanoukville, Cambodia</h2>
-     <h3>Sihanoukville, Cambodia is known for its tropical beaches and crystal-clear waters. This country is known for its temples too.[cite: 1]</h3>
-   </div>
-</div>
-<br><br>
-     <div id="hidden-content" until-found>
-         <div class="card" style="width: 530px; height: 406px;">
+       <img src="Sihanoukville Cambodia.jpg" alt="">
+        <h2>Sihanoukville, Cambodia</h2>
+         <h3>Sihanoukville, Cambodia is known for its tropical beaches and crystal-clear waters. This country is known for its temples too.</h3>
+    </div>
+  </div>
+
+  <div id="hidden-content">
+     <div class="card" style="width: 530px; height: 406px;">
         <img src="Bora Bora French Polynesia.jpg" alt="">
          <h2>Bora Bora, French Polynesia</h2>
-          <h3>An island known for its stunning turquoise waters, beaches, and luxurious overwater bungalows. This country is one of the best vacation spots.[cite: 1]</h3>
-        </div>
-      </div>
+          <h3>An island known for its stunning turquoise waters, beaches, and luxurious overwater bungalows. This country is one of the best vacation spots.</h3>
+    </div>
+  </div>
 </div>
 </main>
 
