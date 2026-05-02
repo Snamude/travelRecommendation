@@ -29,9 +29,6 @@
             border-radius: 10px; /* Optional: Add rounded corners */
             margin-top: -34rem; /* Add some top margin */
             text-align: left; /* Center the text */
-
-
-
         }
 
         h1 {
@@ -128,31 +125,42 @@ main img {
   padding-left: 2rem 0;
 }
 
-/* ADDED RESPONSIVE OVERRIDES BELOW TO FIX THE LANDING PAGE VIEW */
-@media screen and (max-width: 992px) {
+/* --- ADDED RESPONSIVE CSS BELOW --- */
+@media screen and (max-width: 1100px) {
     .container {
-        padding-right: 0 !important; /* Removes the large right gap on mobile/tablets */
+        padding-right: 0 !important; /* Removes massive desktop padding */
         padding-left: 15px;
         padding-right: 15px;
     }
+
     .jumbotron {
-        margin-top: 20px !important; /* Brings the box back into view on small screens */
+        margin-top: 2rem !important; /* Resets the negative margin so it is visible */
         width: 100%;
-        max-width: 500px;
+        max-width: 600px;
+        text-align: center;
     }
+
     main .cotainer {
         padding-left: 0 !important; /* Centers search results on mobile */
-        justify-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    main img {
-        width: 100% !important; /* Makes images fit the phone screen width */
-        height: auto;
-    }
+
     .card {
-        width: 90% !important; /* Ensures cards don't overflow the screen */
+        width: 95% !important; /* Ensures cards fit mobile screen width */
+        height: auto !important;
+        max-width: 500px;
+    }
+
+    main img {
+        width: 100% !important;
         height: auto !important;
     }
 }
+/* --- END OF ADDED CSS --- */
+
     </style>
 </head>
 <body>
